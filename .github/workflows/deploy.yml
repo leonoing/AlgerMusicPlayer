@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main # 或者您的主分支名称
+      - '.github/workflows/sync-release.yml' # 忽略 Release 同步脚本
+      # - '.github/**'                        # 如果想忽略整个 .github 目录的所有修改，取消此行注释
   workflow_dispatch: # 允许手动触发
 
 jobs:
